@@ -79,8 +79,31 @@ edit svg
 ### 輸入 CSV 的要求
 
 ![image](https://github.com/andythebreaker/snakeskin/assets/43373581/12758d7d-0e5e-4be5-bc7f-5aacf7f1a529)
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/12758d7d-0e5e-4be5-bc7f-5aacf7f1a529)
 
+#### 紅色部分
+
+- 需要有值
+- 不會被讀到
+
+#### 綠色部分
+
+- 會被讀到
+
+#### CSV 外型
+
+- 須為矩形
+
+#### CSV 編碼
+
+- 須為UTF-8
+
+##### CSV: BIG5 TO UTF8
+
+- open VS code
+- open target file
+- left bottom of VS code edit area, find: select codec
+- 1. read with... big5
+- 2. save with... utf8
 
 ## 參考資料
 
