@@ -66,6 +66,10 @@ edit svg
 <g transform="translate(-496500,18) scale(0.25)">
 ```
 
+## 主程式的使用方法
+
+
+
 ## 參考資料
 
 ![image](https://github.com/andythebreaker/snakeskin/assets/43373581/3988ca4d-4f02-41ac-98bd-4c2a6f622a3b)
