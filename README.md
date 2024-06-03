@@ -31,7 +31,7 @@
 |b.csv|**CSV**of購買者價格交易表487部門-Co相關||
 |g.csv|**CSV**of生產者價格交易表487部門-Co相關||
 
-## 輸入規格
+## 資料規格
 
 ![image](https://github.com/andythebreaker/snakeskin/assets/43373581/8811cedf-c929-43b8-8797-aa59f4a76214)
 
