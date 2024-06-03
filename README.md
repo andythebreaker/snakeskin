@@ -25,7 +25,7 @@
 |--|--|--|
 |buyr.svg|**蛇行圖**of購買者價格交易表487部門-Co相關|[可互動的蛇圖.svg](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/buyr.svg)|
 |g.svg|**蛇行圖**of生產者價格交易表487部門-Co相關|[可互動的蛇圖.svg](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/g.svg)|
-|main.py|主程式|[下載(右鍵另存新檔)]()|
+|main.py|主程式|[下載(右鍵另存新檔)](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/main.py)|
 
 ## 圖案的製備方法
 
@@ -68,6 +68,18 @@ edit svg
 
 ## 主程式的使用方法
 
+1. download .py file
+2. use text editor to open the file
+3. at line 37, give input file name
+4. at line 48, give output file name
+5. put input csv in the same folder as the .py file
+6. in the folder, left click, select "open with 終端機"
+7. run command "python main.py"
+
+### 輸入 CSV 的要求
+
+![image](https://github.com/andythebreaker/snakeskin/assets/43373581/12758d7d-0e5e-4be5-bc7f-5aacf7f1a529)
+![image](https://github.com/andythebreaker/snakeskin/assets/43373581/12758d7d-0e5e-4be5-bc7f-5aacf7f1a529)
 
 
 ## 參考資料
