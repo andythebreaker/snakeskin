@@ -25,6 +25,46 @@
 |--|--|--|
 |buyr.svg|**蛇行圖**of購買者價格交易表487部門-Co相關|[可互動的蛇圖.svg](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/buyr.svg)|
 |g.svg|**蛇行圖**of生產者價格交易表487部門-Co相關|[可互動的蛇圖.svg](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/g.svg)|
+|main.py|主程式|[下載(右鍵另存新檔)]()|
+
+## 圖案的製備方法
+
+### 1. 主方法
+
+使用[https://sankeymatic.com/build/](https://sankeymatic.com/build/)開源蛇圖繪製器，線上工具，離線可用，需有大記憶體與中央處理器的電腦，不然會跑很久。
+
+- 缺失
+  - 對CSV檔案相容性差
+- 優點
+  - 可批次匯入數據
+ 
+### 2. 改善，使用python主程式
+
+可匯入CSV檔，輸出sankeymatic相容的格式
+
+### 3. 使用者手動把步驟2的輸出結果貼到步驟1
+
+調整長寬為:
+
+- Width:
+- 500000
+- Height:
+- 20000
+
+### 4. 下載SVG
+
+須拉到X軸最右邊，Y軸中間，方可檢視圖片
+
+#### (看更多...)給工程師的話
+
+edit svg
+
+```
+<text x="10" y="20" font-family="Arial" font-size="16" fill="black">
+    Scroll down to middle of y axis
+</text>
+<g transform="translate(-496500,18) scale(0.25)">
+```
 
 ## 參考資料
 
