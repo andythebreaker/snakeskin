@@ -1,5 +1,15 @@
 # snakeskin
 
+---
+
+## 分析`https://github.com/plotly/plotly.js`
+
+### 範例程式`https://plotly.com/javascript/sankey-diagram/#basic-sankey-diagram`
+
+追蹤
+
+---
+
 ###### 示意圖
 
 ![image](https://github.com/andythebreaker/snakeskin/assets/43373581/6dadb406-ed9c-4caa-8996-a69ac410d74d)
