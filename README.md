@@ -6,7 +6,24 @@
 
 ### 範例程式`https://plotly.com/javascript/sankey-diagram/#basic-sankey-diagram`
 
-追蹤
+- 加上DIV在BODY中
+- 該DIV ID是`'myDiv'`
+
+```javascript=
+Plotly.react('myDiv', data, layout)
+```
+
+#### 追蹤
+
+- `Plotly.react('myDiv', data, layout)`
+- `plotDone = exports.newPlot(gd, data, layout, config);`
+  - 與plotly.js hello word相同 (大概是這樣)
+  ```
+  import "https://unpkg.com/virtual-webgl@1.0.6/src/virtual-webgl.js"
+  import "./plotly-2.33.0.js"
+  import "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+  Plotly.newPlot("gd", [{ y: [1, 2, 3] }])
+  ```
 
 ---
 
