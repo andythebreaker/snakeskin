@@ -1,5 +1,34 @@
 # snakeskin
+```function findAndFilterSVGNodes() {
+    // Find all <g> elements with class 'sankey-node'
+    const nodes = document.querySelectorAll('g.sankey-node');
 
+    // Filter out nodes that include "林于馨" in their innerHTML
+    const filteredNodes = Array.from(nodes).filter(node => node.innerHTML.includes("林于馨"));
+
+    // Array to store object representations of <rect> elements
+    let rects = [];
+
+    // Iterate over filtered nodes and find <rect> elements inside
+    filteredNodes.forEach(node => {
+        const rectElements = node.querySelectorAll('rect');
+        rectElements.forEach(rect => {
+            // Get width and height of <rect>
+            const width = rect.getAttribute('width');
+            const height = rect.getAttribute('height');
+            // Get x and y position of <rect> relative to the SVG or parent container
+            const x = rect.getAttribute('x');
+            const y = rect.getAttribute('y');
+            
+            // Store information in an object
+            rects.push({ width, height, x, y });
+        });
+    });
+
+    // Return array of objects containing width, height, x, y of <rect> elements
+    return rects;
+}
+```
 ---
 
 ## 分析`https://github.com/plotly/plotly.js`
@@ -24,6 +53,7 @@ Plotly.react('myDiv', data, layout)
   import "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
   Plotly.newPlot("gd", [{ y: [1, 2, 3] }])
   ```
+- `return exports._doPlot(gd, data, layout, config);`
 
 ---
 

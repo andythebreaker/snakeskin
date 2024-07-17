@@ -1,5 +1,5 @@
 <head>
-    <title>Plotly.js Example</title>
+    <title>bear</title>
 </head>
 
 <body>
@@ -7,7 +7,7 @@
 
     <script type="module">
         import "https://unpkg.com/virtual-webgl@1.0.6/src/virtual-webgl.js"
-        import "./plotly-2.33.0.js"
+        import "./plotly-2.33.0_move_box.js"
         import "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
         //Plotly.newPlot("gd", [{ y: [1, 2, 3] }])
         var data = {
@@ -20,21 +20,21 @@
                     color: "black",
                     width: 0.5
                 },
-                label: ["A1", "A2", "B1", "B2", "C1", "C2"],
-                color: ["blue", "blue", "blue", "blue", "blue", "blue"]
+                label: ["邱品涵", "王逸嘉", "林佳霓", "李孟純", "劉語晴", "林于馨","潘姿怡"],
+                color: ["blue", "blue", "blue", "blue", "blue", "blue", "blue"]
             },
 
             link: {
-                source: [0, 1, 0, 2, 3, 3],
-                target: [2, 3, 3, 4, 4, 5],
-                value: [8, 4, 2, 8, 4, 2]
+                source: [0, 1, 0, 2, 3, 3,6],
+                target: [2, 3, 3, 4, 4, 5,5],
+                value: [8, 4, 2, 8, 4, 2,3]
             }
         }
 
         var data = [data]
 
         var layout = {
-            title: "Basic Sankey",
+            title: "[<3]string__i am a title__[<3]",
             font: {
                 size: 10
             }
