@@ -1,0 +1,4 @@
+nodes=['a', 'b', 'c']
+linkss=['1', '2']
+linkst=['2', '3']
+linksv=['3', '4']
