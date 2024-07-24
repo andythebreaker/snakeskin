@@ -13,7 +13,7 @@ for (package_name in package_lst) {
 }
 
 # Read command line arguments
-# args <- commandArgs(trailingOnly = TRUE)
+args <- commandArgs(trailingOnly = TRUE)
 
 nodes <<- list()#<- strsplit(args[1], ",")[[1]]
 linkss <<- list()#<- as.numeric(strsplit(args[2], ",")[[1]])
@@ -31,11 +31,11 @@ var_idx <- 0
 for (line in lines) {
   if (var_idx == 0) {
     nodes <- strsplit(line, ",")[[1]]
-  }else if (condition) {
+  }else if (var_idx == 1) {
     linkss <- strsplit(line, ",")[[1]]
-  }else if (condition) {
+  }else if (var_idx == 2) {
     linkst <- strsplit(line, ",")[[1]]
- } else if (condition) {
+ } else if (var_idx == 3) {
     linksv <- strsplit(line, ",")[[1]]
   }else {
     #do nothing
