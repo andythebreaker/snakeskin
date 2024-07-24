@@ -14,7 +14,7 @@ for (package_name in package_lst) {
 
 # Read command line arguments
 args <- commandArgs(trailingOnly = TRUE)
-
+nodes64 <<- list()
 nodes <<- list()#<- strsplit(args[1], ",")[[1]]
 linkss <<- list()#<- as.numeric(strsplit(args[2], ",")[[1]])
 linkst <<- list()#<- as.numeric(strsplit(args[3], ",")[[1]])
@@ -30,12 +30,15 @@ lines <- readLines(file_path)
 var_idx <- 0
 for (line in lines) {
   if (var_idx == 0) {
-    nodes <- strsplit(line, ",")[[1]]
+    nodes64 <- strsplit(line, ",")[[1]]
+    for (n64 in nodes64) {
+      nodes <- c(nodes, rawToChar(base64_decode(n64)))
+    }
   }else if (var_idx == 1) {
     linkss <- strsplit(line, ",")[[1]]
   }else if (var_idx == 2) {
     linkst <- strsplit(line, ",")[[1]]
- } else if (var_idx == 3) {
+  } else if (var_idx == 3) {
     linksv <- strsplit(line, ",")[[1]]
   }else {
     #do nothing
