@@ -1,4 +1,4 @@
-nodes=['a', 'b', 'c']
-linkss=['1', '2']
-linkst=['2', '3']
-linksv=['3', '4']
+nodes=['a', 'b', 'c', 'b']
+linkss=['0', '1', '2']
+linkst=['1', '2', '3']
+linksv=['1', '2', '3']

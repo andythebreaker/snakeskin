@@ -1,0 +1,46 @@
+
+<head>
+    <title>bear</title>
+</head>
+
+<body>
+    <div id="gd"></div>
+
+    <script type="module">
+        import "https://unpkg.com/virtual-webgl@1.0.6/src/virtual-webgl.js"
+        import "https://cdn.jsdelivr.net/gh/andythebreaker/snakeskin@V2.0.1/plotly-2.33.0_move_box.js"//"./plotly-2.33.0_move_box.js"
+        import "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+        var data = {
+            type: "sankey",
+            orientation: "h",
+            node: {
+                pad: 15,
+                thickness: 30,
+                line: {
+                    color: "black",
+                    width: 0.5
+                },
+                label: ["person3","person1","person2","person4"],
+                color: ["#ddb98b","#ddb98b","#ddb98b","#ddb98b"]
+            },
+
+            link: {
+                source: [0,0,3,3],
+                target: [1,2,1,2],
+                value: [5,6,2,3]
+            }
+        }
+
+        var data = [data]
+
+        var layout = {
+            title: "[<3]string__i am a title__[<3]",
+            font: {
+                size: 10
+            }
+        }
+
+        Plotly.react('gd', data, layout)
+
+    </script>
+</body>
