@@ -1,4 +1,13 @@
 # snakeskin
+
+to do 接下來 修 這個
+
+![image](https://github.com/user-attachments/assets/043fb5c0-fec1-4739-b414-ef01138af2f1)
+
+
+![image](https://github.com/user-attachments/assets/e4148f70-733b-44cb-9233-51c7cea19fde)
+
+
 ```function findAndFilterSVGNodes() {
     // Find all <g> elements with class 'sankey-node'
     const nodes = document.querySelectorAll('g.sankey-node');
