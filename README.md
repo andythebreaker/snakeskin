@@ -8,6 +8,14 @@ to do 接下來 修 這個
 ![image](https://github.com/user-attachments/assets/e4148f70-733b-44cb-9233-51c7cea19fde)
 
 
+除了這個之外
+![image](https://github.com/user-attachments/assets/6973bbd8-eba7-430d-8045-5b8e0d6a3284)
+
+可以用索引值
+
+---
+
+
 ```function findAndFilterSVGNodes() {
     // Find all <g> elements with class 'sankey-node'
     const nodes = document.querySelectorAll('g.sankey-node');
