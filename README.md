@@ -1,5 +1,17 @@
 # snakeskin
 
+# todo next
+
+![image](https://github.com/user-attachments/assets/8ec9e90b-57b7-494a-90dc-9516f39ef80c)
+
+![image](https://github.com/user-attachments/assets/72405887-4e6a-4c94-bc62-528f22270c71)
+
+
+![image](https://github.com/user-attachments/assets/4b3ae72b-953a-4b1c-87e8-b5549eab8691)
+
+## 在第2.3張圖中使用第一張圖的資料
+
+
 # 重大公告，這個不修了 因為 out of spec
 
 to do 接下來 修 這個
