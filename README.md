@@ -1,5 +1,7 @@
 # snakeskin
 
+# 重大公告，這個不修了 因為 out of spec
+
 to do 接下來 修 這個
 
 ![image](https://github.com/user-attachments/assets/043fb5c0-fec1-4739-b414-ef01138af2f1)
