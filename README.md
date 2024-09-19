@@ -4,6 +4,10 @@
 
 全部說明都移去wiki了
 
+### 有註解的地方(差異性比較)
+
+[https://github.com/andythebreaker/snakeskin/commit/b7fb08077cdcce7bdece4e080f98ea3fa431eda5#r146927012](https://github.com/andythebreaker/snakeskin/commit/b7fb08077cdcce7bdece4e080f98ea3fa431eda5#r146927012)
+
 ## DEMO
 
 ![newplot (1)](https://github.com/user-attachments/assets/c48ab259-9ade-486e-a9b1-d4adab738e23)
