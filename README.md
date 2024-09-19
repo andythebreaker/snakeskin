@@ -1,210 +1,48 @@
 # snakeskin
 
-# todo next
+這邊現在主要是作繪圖套件的JS擴充
 
-![image](https://github.com/user-attachments/assets/8ec9e90b-57b7-494a-90dc-9516f39ef80c)
+全部說明都移去wiki了
 
-![image](https://github.com/user-attachments/assets/72405887-4e6a-4c94-bc62-528f22270c71)
+## DEMO
 
+![newplot (1)](https://github.com/user-attachments/assets/c48ab259-9ade-486e-a9b1-d4adab738e23)
 
-![image](https://github.com/user-attachments/assets/4b3ae72b-953a-4b1c-87e8-b5549eab8691)
+20240919 tmp
 
-## 在第2.3張圖中使用第一張圖的資料
+## 被改過的js
 
+![image](https://github.com/user-attachments/assets/698ac3ad-6bdc-438f-abb2-3c6e6a24c1aa)
 
-# 重大公告，這個不修了 因為 out of spec
+![image](https://github.com/user-attachments/assets/d984c87d-4420-4a81-ac63-f3067c1b5d72)
 
-to do 接下來 修 這個
+## TODO 下面音響
 
-![image](https://github.com/user-attachments/assets/043fb5c0-fec1-4739-b414-ef01138af2f1)
+### 1. 修輸入端...曲線...跟輸出要不一樣
 
+![image](https://github.com/user-attachments/assets/1986de16-d8c6-4265-a87a-8e821f033fa3)
 
-![image](https://github.com/user-attachments/assets/e4148f70-733b-44cb-9233-51c7cea19fde)
 
+### 2. 初始不會自己轉90
 
-除了這個之外
-![image](https://github.com/user-attachments/assets/6973bbd8-eba7-430d-8045-5b8e0d6a3284)
+![image](https://github.com/user-attachments/assets/ed483854-a8a4-49f2-b072-24ff8d242d8d)
 
-可以用索引值
 
----
+### 3. 這樣曲線是順的
 
+![image](https://github.com/user-attachments/assets/d872bc21-544c-4e9e-ae8d-349887578a64)
 
-```function findAndFilterSVGNodes() {
-    // Find all <g> elements with class 'sankey-node'
-    const nodes = document.querySelectorAll('g.sankey-node');
+#### 這卻是反的
 
-    // Filter out nodes that include "林于馨" in their innerHTML
-    const filteredNodes = Array.from(nodes).filter(node => node.innerHTML.includes("林于馨"));
+![image](https://github.com/user-attachments/assets/f484cecd-e4a2-4933-92a6-031417c35833)
 
-    // Array to store object representations of <rect> elements
-    let rects = [];
+中間的線很像斷掉
 
-    // Iterate over filtered nodes and find <rect> elements inside
-    filteredNodes.forEach(node => {
-        const rectElements = node.querySelectorAll('rect');
-        rectElements.forEach(rect => {
-            // Get width and height of <rect>
-            const width = rect.getAttribute('width');
-            const height = rect.getAttribute('height');
-            // Get x and y position of <rect> relative to the SVG or parent container
-            const x = rect.getAttribute('x');
-            const y = rect.getAttribute('y');
-            
-            // Store information in an object
-            rects.push({ width, height, x, y });
-        });
-    });
+### 4. 往下拉的情況整個是悲劇
 
-    // Return array of objects containing width, height, x, y of <rect> elements
-    return rects;
-}
-```
----
+![image](https://github.com/user-attachments/assets/04d542bb-8ce0-4fd1-935f-7b19bc619ee7)
 
-## 分析`https://github.com/plotly/plotly.js`
 
-### 範例程式`https://plotly.com/javascript/sankey-diagram/#basic-sankey-diagram`
+### 5. 貝茲曲線如果可以修更漂亮就好了
 
-- 加上DIV在BODY中
-- 該DIV ID是`'myDiv'`
-
-```javascript=
-Plotly.react('myDiv', data, layout)
-```
-
-#### 追蹤
-
-- `Plotly.react('myDiv', data, layout)`
-- `plotDone = exports.newPlot(gd, data, layout, config);`
-  - 與plotly.js hello word相同 (大概是這樣)
-  ```
-  import "https://unpkg.com/virtual-webgl@1.0.6/src/virtual-webgl.js"
-  import "./plotly-2.33.0.js"
-  import "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
-  Plotly.newPlot("gd", [{ y: [1, 2, 3] }])
-  ```
-- `return exports._doPlot(gd, data, layout, config);`
-
----
-
-###### 示意圖
-
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/6dadb406-ed9c-4caa-8996-a69ac410d74d)
-
-## 重要
-
-### 能量流的線，滑鼠游標懸停於上，可顯示其流量
-
-觀看蛇圖請用chrome右上角的[漢堡圖示](https://zh.wikipedia.org/zh-tw/%E6%BC%A2%E5%A0%A1%E9%81%B8%E5%96%AE)，縮放25%，用筆電的觸控板縮放並平移
-
-###### 縮放
-
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/1f14cd7f-a242-4cfc-b5dd-d75b3bc71d38)
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/68e32129-3e2e-4098-8b4c-197676eb0c11)
-
-###### 平移
-
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/68999662-7161-4f90-a098-e58c9586f476)
-
-## 檔案名稱說明
-
-|檔案名稱|說明|超連結(新分頁中開啟)|
-|--|--|--|
-|buyr.svg|**蛇行圖**of購買者價格交易表487部門-Co相關|[可互動的蛇圖.svg](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/buyr.svg)|
-|g.svg|**蛇行圖**of生產者價格交易表487部門-Co相關|[可互動的蛇圖.svg](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/g.svg)|
-|main.py|主程式|[下載(右鍵另存新檔)](https://raw.githubusercontent.com/andythebreaker/snakeskin/main/main.py)|
-|op1.txt|**輸出**of購買者價格交易表487部門-Co相關||
-|op.txt|**輸出**of生產者價格交易表487部門-Co相關||
-|b.csv|**CSV**of購買者價格交易表487部門-Co相關||
-|g.csv|**CSV**of生產者價格交易表487部門-Co相關||
-
-## 資料規格
-
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/8811cedf-c929-43b8-8797-aa59f4a76214)
-
-紅色輸入，綠色輸出
-
-## 圖案的製備方法
-
-### 1. 主方法
-
-使用[https://sankeymatic.com/build/](https://sankeymatic.com/build/)開源蛇圖繪製器，線上工具，離線可用，需有大記憶體與中央處理器的電腦，不然會跑很久。
-
-- 缺失
-  - 對CSV檔案相容性差
-- 優點
-  - 可批次匯入數據
- 
-### 2. 改善，使用python主程式
-
-可匯入CSV檔，輸出sankeymatic相容的格式
-
-### 3. 使用者手動把步驟2的輸出結果貼到步驟1
-
-調整長寬為:
-
-- Width:
-- 500000
-- Height:
-- 20000
-
-### 4. 下載SVG
-
-須拉到X軸最右邊，Y軸中間，方可檢視圖片
-
-#### (看更多...)給工程師的話
-
-edit svg
-
-```
-<text x="10" y="20" font-family="Arial" font-size="16" fill="black">
-    Scroll down to middle of y axis
-</text>
-<g transform="translate(-496500,18) scale(0.25)">
-```
-
-## 主程式的使用方法
-
-1. download .py file
-2. use text editor to open the file
-3. at line 37, give input file name
-4. at line 48, give output file name
-5. put input csv in the same folder as the .py file
-6. in the folder, left click, select "open with 終端機"
-7. run command "python main.py"
-
-### 輸入 CSV 的要求
-
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/12758d7d-0e5e-4be5-bc7f-5aacf7f1a529)
-
-#### 紅色部分
-
-- 需要有值
-- 不會被讀到
-
-#### 綠色部分
-
-- 會被讀到
-
-#### CSV 外型
-
-- 須為矩形
-
-#### CSV 編碼
-
-- 須為UTF-8
-
-##### CSV: BIG5 TO UTF8
-
-- open VS code
-- open target file
-- left bottom of VS code edit area, find: select codec
-- 1. read with... big5
-- 2. save with... utf8
-
-## 參考資料
-
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/3988ca4d-4f02-41ac-98bd-4c2a6f622a3b)
-![image](https://github.com/andythebreaker/snakeskin/assets/43373581/17ba53f7-7adb-4c0e-931c-17ee10b04158)
-
+![image](https://github.com/user-attachments/assets/79214e80-86ea-4b39-be68-e9975d3045a0)
