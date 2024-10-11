@@ -22,31 +22,8 @@
 
 ## TODO 下面音響
 
-### 1. 修輸入端...曲線...跟輸出要不一樣
-
-![image](https://github.com/user-attachments/assets/1986de16-d8c6-4265-a87a-8e821f033fa3)
-
-
 ### 2. 初始不會自己轉90
 
 ![image](https://github.com/user-attachments/assets/ed483854-a8a4-49f2-b072-24ff8d242d8d)
 
-
-### 3. 這樣曲線是順的
-
-![image](https://github.com/user-attachments/assets/d872bc21-544c-4e9e-ae8d-349887578a64)
-
-#### 這卻是反的
-
-![image](https://github.com/user-attachments/assets/f484cecd-e4a2-4933-92a6-031417c35833)
-
-中間的線很像斷掉
-
-### 4. 往下拉的情況整個是悲劇
-
-![image](https://github.com/user-attachments/assets/04d542bb-8ce0-4fd1-935f-7b19bc619ee7)
-
-
-### 5. 貝茲曲線如果可以修更漂亮就好了
-
-![image](https://github.com/user-attachments/assets/79214e80-86ea-4b39-be68-e9975d3045a0)
+還有issue
